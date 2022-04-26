@@ -36,9 +36,7 @@ For the Head, Tail, D block of KIB module and KIC module, we use $3\times 3$ con
 
 ## <span id="1">Dataset</span>
 
-We use two data sets to evaluate our method, i.e.,for image and video tasks. Both of these two data sets contain information about moving light sources, rich colors, high
-
-lights and bright. For the image task ,we use NTIRE 2021 dataset. They are 1416 paired training images and 78 test images. For the video task, we conduct experiment on **HDRTV**[3]. This dataset contains 1235 paired training pictures and 117 test pictures. Please refer to the paper for the details on the processing of this dataset. This dataset can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1YfdFYD03KMyhKnpDo9nnZw)(accsee code: mpr6) .
+We use two data sets to evaluate our method, i.e.,for image and video tasks. Both of these two data sets contain information about moving light sources, rich colors, highlights and bright. For the image task ,we use NTIRE 2021 dataset. They are 1416 paired training images and 78 test images. For the video task, we conduct experiment on **HDRTV**[3]. This dataset contains 1235 paired training pictures and 117 test pictures. Please refer to the paper for the details on the processing of this dataset. This dataset can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1YfdFYD03KMyhKnpDo9nnZw)(accsee code: mpr6) .
 
 ## <span id="2">Configure</span>
 
