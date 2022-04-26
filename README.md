@@ -86,10 +86,10 @@ we provide the pretrained models to test, which can be downloaded from the link 
   python train.py -opt option/train/train_KIB.yml
   ```
 
--  For the video task 
+- For the video task 
 
   ```bash
-  python train.py -opt option/train/train_hdrtv.yml 
+  python train.py -opt option/train/train_hdrtv.yml  
   ```
 
 - All models and training states are stored in `./experiments`.
