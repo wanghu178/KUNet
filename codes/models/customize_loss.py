@@ -5,46 +5,19 @@ import numpy as np
 from torch.nn.modules import loss
 from models.vgg import VGGLoss
 from models.ssim import SSIM
-class tanh_L1Loss(nn.Module):
-    def __init__(self):
-        super(tanh_L1Loss, self).__init__()
-    def forward(self, x, y):
-        loss = torch.mean(torch.abs(torch.tanh(x) - torch.tanh(y)))
-        return loss
-
-class tanh_L2Loss(nn.Module):
-    def __init__(self):
-        super(tanh_L2Loss, self).__init__()
-    def forward(self, x, y):
-        loss = torch.mean(torch.pow((torch.tanh(x) - torch.tanh(y)), 2))
-        return loss
-
-#L = R*0.299+G*0.587+B*0.114
-class bright_L1Loss(nn.Module):
-    def __init__(self):
-        super(bright_L1Loss,self).__init__()
-        self.l1 = nn.L1Loss()
-    def forward(self,x,y):
-        loss1 = self.l1(tensor_rgbtgray(x),tensor_rgbtgray(y))
-        loss2 = self.l1(x,y)
-        loss = loss1+loss2
-        return loss
 
 class artifical_Loss(nn.Module):
     def __init__(self):
         super(artifical_Loss,self).__init__()
         self.vggloss = VGGLoss()
         self.l1 = nn.L1Loss()
-        #self.ssim_loss = SSIM()
+
         self.l2 = nn.MSELoss()
     def forward(self,x,y):
         loss1 = self.l1(x,y)
-        loss2 = self.l1(mu_tonemap(x),mu_tonemap(y))
-        #loss_ssim = self.ssim_loss(x,y)
         loss3 = self.vggloss(x,y)
-    
-        #loss4 = self.l1(tensor_rgbtgray(x),tensor_rgbtgray(y))
-        #loss = 6*loss1 + 0.1*loss2  + loss3+0.1*loss4
+
+
         loss = loss1+loss3
         return loss
 

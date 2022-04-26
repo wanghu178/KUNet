@@ -38,34 +38,15 @@ class GenerationModel(BaseModel):
             # loss
             loss_type = train_opt['pixel_criterion']
             if loss_type == 'l1':
-                self.cri_pix = nn.L1Loss().to(self.device)
+                self.cri_pix = nn.L1Loss().to(self.device) #基础损失函数
             elif loss_type == 'l2':
                 self.cri_pix = nn.MSELoss().to(self.device)
-            elif loss_type == 'tanh_l1':
-                self.cri_pix = tanh_L1Loss().to(self.device)
-            elif loss_type == 'tanh_l2':
-                self.cri_pix = tanh_L2Loss().to(self.device)
-            elif loss_type == 'gray_l1':
-                self.cri_pix = bright_L1Loss().to(self.device)
-            elif loss_type == 'artifical_l1':
-                self.cri_pix = artifical_Loss().to(self.device)
-            elif loss_type == 'mask_l1':
-                self.cri_pix = nn.L1Loss().to(self.device)
-                self.mask_pix = mask_loss().to(self.device)
             elif loss_type == "maskl1_l1":
                 self.cri_pix = nn.L1Loss().to(self.device)
-                self.mask_pix= mask_l1_loss().to(self.device)
-            elif loss_type == "mask3":
-                self.cri_pix = nn.L1Loss().to(self.device)
-                self.mask_pix= mask3().to(self.device)
-            elif loss_type == "mask4":
-                self.cri_pix = nn.L1Loss().to(self.device)
-                self.mask_pix= mask4().to(self.device)
+                self.mask_pix= mask_l1_loss().to(self.device) #重建mask
             elif loss_type == "ganzhi_mask":
-                self.cri_pix = artifical_Loss().to(self.device)
-                self.mask_pix= mask4().to(self.device)
-            
-            
+                self.cri_pix = artifical_Loss().to(self.device) # hdrtv加感知损失函数u
+                self.mask_pix= mask4().to(self.device) 
             else:
                 raise NotImplementedError('Loss type [{:s}] is not recognized.'.format(loss_type))
             self.l_pix_w = train_opt['pixel_weight']

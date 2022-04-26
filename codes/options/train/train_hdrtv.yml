@@ -55,7 +55,7 @@ train:
   lr_steps: [100000, 200000, 300000, 400000,500000]
   lr_gamma: 0.5
 
-  pixel_criterion: maskl1_l1 # l1 | l2 | tanh_l1 | tanh_l2
+  pixel_criterion: maskl1_l1 # l1 | 
   pixel_weight: 0.01
 
   manual_seed: 10
