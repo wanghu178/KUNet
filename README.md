@@ -28,15 +28,19 @@ For the Head, Tail, D block of KIB module and KIC module, we use $3\times 3$ con
 
 # Getting Started
 
+1. [Dataset](# 1)
+2. [Configure](# 2)
+3. [Test](# 3)
+4. [Train](# 4)
+5. [Metrics](# 5)
 
-
-## Dataset
+## <span id="1">Dataset</span>
 
 We use two data sets to evaluate our method, i.e.,for image and video tasks. Both of these two data sets contain information about moving light sources, rich colors, high
 
 lights and bright. For the image task ,we use NTIRE 2021 dataset. They are 1416 paired training images and 78 test images. For the video task, we conduct experiment on **HDRTV**[3]. This dataset contains 1235 paired training pictures and 117 test pictures. Please refer to the paper for the details on the processing of this dataset. This dataset can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1YfdFYD03KMyhKnpDo9nnZw)(accsee code: mpr6) .
 
-## Configure
+## <span id="2">Configure</span>
 
 ```bash
 h5py==3.6.0
@@ -55,7 +59,7 @@ tqdm==4.61.2
 yaml==0.2.5
 ```
 
-## How to test
+## <span id="3">How to test</span>
 
 we provide the pretrained models to test, which can be downloaded from the link provided by the dataset. Please put the obtained files into models according to the instructions. 
 
@@ -66,7 +70,7 @@ we provide the pretrained models to test, which can be downloaded from the link 
   python /test.py -opt /options/test/KIB_mask.yml
   ```
 
-## How to train
+## <span id="4">How to train</span>
 
 - Prepare the data. Generate the sub-images with specific path size using ```./scripts/extract_subimgs_single.py``` 
 
@@ -90,7 +94,7 @@ we provide the pretrained models to test, which can be downloaded from the link 
 
 - All models and training states are stored in `./experiments`.
 
-## Metrics
+## <span id="5">Metrics</span>
 
 Two metrics are used to evaluate the quantitative performance of different methods on image tasks, including $PSNR$ and $\mu-psnr$ . Five metrics are used to evaluate the quantitative performance of different methods on video tasks, including PSNR, SSIM, SR_SIM, Delta EITP (ITU Rec.2124)and HDR-VDP3. we provide some reference codes in `./metrics` for convenient usage.
 
@@ -109,4 +113,3 @@ Two metrics are used to evaluate the quantitative performance of different metho
 # Ackonwledgment
 
 The code and format is inspired by [HDRTV](https://github.com/chxy95/HDRTVNet.git)
-
