@@ -28,11 +28,11 @@ For the Head, Tail, D block of KIB module and KIC module, we use $3\times 3$ con
 
 # Getting Started
 
-1. [Dataset](# 1)
-2. [Configure](# 2)
-3. [Test](# 3)
-4. [Train](# 4)
-5. [Metrics](# 5)
+1. [Dataset](#1)
+2. [Configure](#2)
+3. [Test](#3)
+4. [Train](#4)
+5. [Metrics](#5)
 
 ## <span id="1">Dataset</span>
 
