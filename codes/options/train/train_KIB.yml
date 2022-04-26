@@ -1,0 +1,69 @@
+#### general settings
+name: KIB_final
+model: condition
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+#### datasets
+datasets:
+  train:
+    name: Single_LDR2HDR
+    mode: LQGT_condition
+    dataroot_LQ: E:\NTIRE_single\train\medium
+    dataroot_GT: E:\NTIRE_single\train\hdr
+    dataroot_ratio: E:\NTIRE_single\train\alignratio
+    use_shuffle: true
+    n_workers: 8
+    batch_size: 8
+    GT_size: 256
+    use_flip: true
+    use_rot: true
+    condition: image
+  val:
+    name: Single_LDR2HDR
+    mode: LQGT_condition
+    dataroot_LQ: E:\NTIRE_single\valid\medium
+    dataroot_GT: E:\NTIRE_single\valid\hdr
+    dataroot_ratio: E:\NTIRE_single\valid\alignratio
+    condition: image
+
+#### network structures
+network_G:
+  which_model_G: KIB_DM_F_1x1
+  in_nc: 3
+  out_nc: 3
+  nf: 64 
+  act_type: relu 
+
+#### path
+path:
+  root: ./
+  #pretrain_model_G: 
+  strict_load: false
+  #resume_state: 
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 2e-4
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000 # 600000 
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [200000, 400000, 600000, 800000]
+  lr_gamma: 0.5
+
+  pixel_criterion: l1 # l1 | l2 | tanh_l1 | tanh_l2
+  pixel_weight: 1.0
+
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3

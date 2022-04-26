@@ -1,0 +1,67 @@
+#### general settings
+name: hdrtv_final
+model: condition
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+#### datasets
+datasets:
+  train:
+    name: Single_LDR2HDR
+    mode: hdrtv
+    dataroot_LQ: E:\hdrtv\training_set\train_sdr
+    dataroot_GT: E:\hdrtv\training_set\train_hdr
+    use_shuffle: true
+    n_workers: 8
+    batch_size: 12
+    GT_size: 256
+    use_flip: true
+    use_rot: true
+    condition: image
+  val:
+    name: Single_LDR2HDR
+    mode: hdrtv
+    dataroot_LQ: E:\hdrtv\valid\sdr
+    dataroot_GT: E:\hdrtv\valid\hdr
+    condition: image
+
+#### network structures
+network_G:
+  which_model_G: KIB_DM_F_1x1_mask
+  in_nc: 3
+  out_nc: 3
+  nf: 64 
+  act_type: relu 
+
+#### path
+path:
+  root: ./
+  #pretrain_model_G: C:\Users\wanghu\Documents\experiment\code\hdrunetplus\experiments\hdrtv2\models\360000_G.pth
+  strict_load: false
+  #resume_state: C:\Users\wanghu\Documents\experiment\code\hdrunetplus\experiments\hdrtv2\training_state\360000.state
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 2e-4
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000 # 600000 
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [100000, 200000, 300000, 400000,500000]
+  lr_gamma: 0.5
+
+  pixel_criterion: maskl1_l1 # l1 | l2 | tanh_l1 | tanh_l2
+  pixel_weight: 0.01
+
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
