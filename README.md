@@ -5,7 +5,7 @@
 - [ ] Submit appendex
 - [ ] Perfect link to the paper
 - [x] Citation
-- [ ] Acknowledgment
+- [x] Acknowledgment
 - [x] Getting Started
 
 # KUNet[Paper Link]
@@ -63,7 +63,7 @@ we provide the pretrained models to test, which can be downloaded from the link 
 
 - ```bash
   cd code/
-  python .\test.py -opt .\options\test\KIB_mask.yml
+  python /test.py -opt /options/test/KIB_mask.yml
   ```
 
 ## How to train
@@ -73,7 +73,7 @@ we provide the pretrained models to test, which can be downloaded from the link 
 - make sure that the paths and settings in `./options/train/train_KIB.yml` are correct,then run
 
   ```bash
-  cd codes
+  cd codes/
   ```
 
 - For the image task 
