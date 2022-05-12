@@ -2,7 +2,7 @@
 
 - [x] Submit source code
 - [x] Submit implementation details
-- [ ] Submit appendex
+- [x] Submit appendex
 - [ ] Perfect link to the paper
 - [x] Citation
 - [x] Acknowledgment
