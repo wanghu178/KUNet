@@ -7,6 +7,7 @@
 - [x] Citation
 - [x] Acknowledgment
 - [x] Getting Started
+- [x] Reference
 
 # KUNet[Paper Link]
 
@@ -107,7 +108,15 @@ Two metrics are used to evaluate the quantitative performance of different metho
 3. X. Chen, Z. Zhang, J. Ren, L. Tian, Y. Qiao, and C. Dong. A new journey from SDRTV to HDRTV. In *ICCV*,
 
    pages 4500–4509, 2021.
-
+# Citation
+If our work is helpful to you, please cite our paper:
+```bash
+@inproceedings{wang2022kunet,
+  title={KUNet: Imaging Knowledge-Inspired Single HDR Image Reconstruction},
+  author={Wang, Hu and Ye, Mao and ZHU, XIATIAN and Li, Shuai and Zhu, Ce and Li, Xue},
+  booktitle={IJCAI-ECAI 2022}
+}
+```
 # Ackonwledgment
 
 The code and format is inspired by [HDRTV](https://github.com/chxy95/HDRTVNet.git)
