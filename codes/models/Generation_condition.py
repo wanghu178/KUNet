@@ -8,7 +8,7 @@ from torch.nn.parallel import DataParallel, DistributedDataParallel
 import models.networks as networks
 import models.lr_scheduler as lr_scheduler
 from .base_model import BaseModel
-from models.customize_loss import tanh_L1Loss, tanh_L2Loss,artifical_Loss,bright_L1Loss,mask_loss,mask_l1_loss,mask3,mask4
+from models.customize_loss import artifical_Loss,mask_loss,mask_l1_loss,mask3,mask4
 
 logger = logging.getLogger('base')
 
