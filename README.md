@@ -1,6 +1,6 @@
 # NOTE
-在paperwithcode里面对MSU hdr数据测试效果不好，但是目前我们并不知道为什么出现这种问题，我们对模型还有数据集进行核验(HDRTV上)，目前没发现问题。希望有人可以帮助一起排查。非常感谢。
-(We have not been able to test the MSU hdr data well in paperwithcode, but at the moment we don't know why this is happening, we have verified the model and the dataset（HDRTV） and so far no problems have been found. Hopefully someone can help troubleshoot this together. Thank you very much.
+在paperwithcode里面对MSU hdr数据测试效果不好，但是目前我们并不知道为什么出现这种问题，我们对模型还有数据集进行核验(HDRTV上)，目前没发现问题。希望有同行可以帮助一起研究出现该问题的原因。非常感谢。
+(We have not been able to test the MSU hdr data well in paperwithcode, but at the moment we do not know why the problem is occurring, we have verified the model and the dataset (on HDRTV) and no problems have been found so far. We hope that some of our colleagues can help us to investigate the cause of this problem. Thank you very much.
 # TODO
 
 - [x] Submit source code
