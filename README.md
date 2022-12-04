@@ -9,7 +9,7 @@
 - [x] Getting Started
 - [x] Reference
 
-# KUNet[Paper Link](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi3jO3mt9_7AhU2rlYBHXd5AzAQFnoECA0QAQ&url=https%3A%2F%2Fwww.ijcai.org%2Fproceedings%2F2022%2F0196.pdf&usg=AOvVaw1wK5HzDR7X_7pfZi0sHOSl)
+# KUNet\[[Paper Link]\](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi3jO3mt9_7AhU2rlYBHXd5AzAQFnoECA0QAQ&url=https%3A%2F%2Fwww.ijcai.org%2Fproceedings%2F2022%2F0196.pdf&usg=AOvVaw1wK5HzDR7X_7pfZi0sHOSl)
 
 IJCAI2022 (long oral)
 
