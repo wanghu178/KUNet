@@ -1,18 +1,15 @@
-# NOTE
-在paperwithcode里面对MSU hdr数据测试效果不好，但是目前我们并不知道为什么出现这种问题，我们对模型还有数据集进行核验(HDRTV上)，目前没发现问题。希望有同行可以帮助一起研究出现该问题的原因。非常感谢。
-(We have not been able to test the MSU hdr data well in paperwithcode, but at the moment we do not know why the problem is occurring, we have verified the model and the dataset (on HDRTV) and no problems have been found so far. We hope that some of our colleagues can help us to investigate the cause of this problem. Thank you very much.
 # TODO
 
 - [x] Submit source code
 - [x] Submit implementation details
 - [x] Submit appendex
-- [ ] Perfect link to the paper
+- [x] Perfect link to the paper
 - [x] Citation
 - [x] Acknowledgment
 - [x] Getting Started
 - [x] Reference
 
-# KUNet[Paper Link]
+# KUNet[Paper Link](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi3jO3mt9_7AhU2rlYBHXd5AzAQFnoECA0QAQ&url=https%3A%2F%2Fwww.ijcai.org%2Fproceedings%2F2022%2F0196.pdf&usg=AOvVaw1wK5HzDR7X_7pfZi0sHOSl)
 
 IJCAI2022 (long oral)
 
